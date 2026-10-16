@@ -19,9 +19,9 @@ signature: unsigned (pending key setup)
 
 # Chorus Status Dashboard
 
-Generated snapshot. Auto-generated metrics (merge latency, review depth,
-escalation rate) will be wired to the CI pipeline once the repository is
-published on GitHub.
+Generated snapshot. Live repository: https://github.com/exploring-yash/Chorus.
+Auto-generated metrics (merge latency, review depth, escalation rate) will be
+wired to the CI pipeline in P1.
 
 ## Phase
 
@@ -46,5 +46,6 @@ published on GitHub.
 
 ## Open help-wanted (P0)
 
-See issues labeled `good first issue` once the repository is published:
-docs review, skill vetting, spec review, test vectors, CI hardening.
+See issues labeled `good first issue` (label created by `tools/gh-labels.sh`;
+issue drafts in `docs/issues/`): docs review, skill vetting, spec review,
+test vectors, CI hardening.

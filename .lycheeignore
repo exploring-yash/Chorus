@@ -1,5 +1,5 @@
 # Placeholder domains that will 404 until provisioned
 https://chorus.dev
-https://github.com/chorus-dev/chorus
-https://github.com/chorus-dev/chorus/issues
-https://github.com/chorus-dev/chorus/labels/good%20first%20issue
+
+# Label URL 404s until `tools/gh-labels.sh` has been run against the repo
+https://github.com/exploring-yash/Chorus/labels/good%20first%20issue

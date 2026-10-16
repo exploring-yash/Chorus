@@ -32,3 +32,13 @@ logs/
 # Tool caches
 .cache/
 .lycheecache/
+
+# Local npm cache workaround (used when the global cache is root-owned) — never commit
+.npm-cache/
+
+# Frontend/build caches (clients in P1+)
+.eslintcache
+.next/
+.turbo/
+.parcel-cache/
+.vercel/

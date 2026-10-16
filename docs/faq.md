@@ -78,7 +78,7 @@ P0 (now) is the foundation: specs, ADRs, governance, CI. P1 (next) ships the
 Option A core: identity, social graph, video pipeline, responses, one relay,
 one web client. See [spec/roadmap.md](spec/roadmap.md).
 
-## I found something unclear or wrong.
+## I found something unclear or wrong
 
 That's a contribution. Open an issue — ideally with a suggested fix. Unclear
 docs are bugs, and we treat them that way.

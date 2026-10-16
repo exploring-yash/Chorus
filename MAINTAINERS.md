@@ -5,7 +5,7 @@ described in [GOVERNANCE.md](GOVERNANCE.md) and updated as maintainers join.
 
 | Handle | Name | Role | Areas |
 | --- | --- | --- | --- |
-| _(add your GitHub handle)_ | _(add your name)_ | Bootstrap maintainer | Everything, until the Maintainer Council forms |
+| [exploring-yash](https://github.com/exploring-yash) | Yash _(update with your full name)_ | Bootstrap maintainer | Everything, until the Maintainer Council forms |
 
 ## Becoming a maintainer
 

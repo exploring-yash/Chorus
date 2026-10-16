@@ -1,35 +1,36 @@
 # CODEOWNERS — Chorus
 #
-# NOTE: team names below use the placeholder org slug `chorus-dev` and must be
-# created on GitHub when the repository is published. Until then, reviews fall
-# back to the repository owner. See GOVERNANCE.md §2 for the role definitions.
+# Live repository: https://github.com/exploring-yash/Chorus
+# Ownership currently points at the bootstrap maintainer; team-based ownership
+# (@chorus-org/<team>) replaces this when the project moves to an organization
+# and pod teams exist. See GOVERNANCE.md §2 for role definitions.
 
 # Global default
-*                       @chorus-dev/maintainers
+*                       @exploring-yash
 
 # Protocol and decisions
-/protocol/              @chorus-dev/maintainers
-/docs/adr/              @chorus-dev/maintainers
+/protocol/              @exploring-yash
+/docs/adr/              @exploring-yash
 
 # Governance and safety files
-/GOVERNANCE.md          @chorus-dev/maintainers
-/SECURITY.md            @chorus-dev/maintainers
-/CODE_OF_CONDUCT.md     @chorus-dev/maintainers
-/CONTRIBUTING.md        @chorus-dev/maintainers
+/GOVERNANCE.md          @exploring-yash
+/SECURITY.md            @exploring-yash
+/CODE_OF_CONDUCT.md     @exploring-yash
+/CONTRIBUTING.md        @exploring-yash
 
 # Skills registry
-/skills/                @chorus-dev/maintainers
+/skills/                @exploring-yash
 
 # Agent identities
-/agents/keys/           @chorus-dev/maintainers
+/agents/keys/           @exploring-yash
 
 # Services (activated per-service as P1 lands; placeholders until teams exist)
-# /services/identity/     @chorus-dev/identity
-# /services/relay/        @chorus-dev/relay
-# /services/video-pipeline/ @chorus-dev/video
-# /services/response/     @chorus-dev/response
-# /services/amplification/ @chorus-dev/amplify
-# /services/moderation/   @chorus-dev/moderation
+# /services/identity/     @chorus-org/identity
+# /services/relay/        @chorus-org/relay
+# /services/video-pipeline/ @chorus-org/video
+# /services/response/     @chorus-org/response
+# /services/amplification/ @chorus-org/amplify
+# /services/moderation/   @chorus-org/moderation
 
 # Clients (activated when client code lands)
-# /clients/               @chorus-dev/clients
+# /clients/               @chorus-org/clients

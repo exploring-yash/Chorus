@@ -20,7 +20,7 @@ contributions before any production code exists:
 - **Test vectors** — [`protocol/test-vectors/`](protocol/test-vectors/) needs canonical signed-object examples that every implementation can test against.
 - **CI hardening** — the gate scripts in [`tools/`](tools/) are stubs that grow as code lands.
 
-Look for issues labeled [`good first issue`](https://github.com/chorus-dev/chorus/labels/good%20first%20issue) (URL goes live when the repo is published).
+Look for issues labeled [`good first issue`](https://github.com/exploring-yash/Chorus/labels/good%20first%20issue) (label created by `tools/gh-labels.sh`; issue drafts live in `docs/issues/`).
 
 ## Ways to contribute without code
 
@@ -33,8 +33,8 @@ Look for issues labeled [`good first issue`](https://github.com/chorus-dev/choru
 ## Getting started (development)
 
 ```bash
-git clone https://github.com/chorus-dev/chorus.git   # URL goes live when published
-cd chorus
+git clone https://github.com/exploring-yash/Chorus.git
+cd Chorus
 nvm use        # Node 20 (see .nvmrc)
 npm install
 npm run docs:lint    # markdown lint

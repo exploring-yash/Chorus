@@ -5,6 +5,12 @@
 > skills from the internet, and begins execution. It assumes agents have tool
 > access (search, file I/O, code execution, terminal I/O).
 >
+> **Live repository:** https://github.com/exploring-yash/Chorus — point every
+> artifact path and git remote at this repo before execution. The P0 todo
+> ledger is seeded in `docs/agents/P0-TODO-LEDGER.md`; the repo-setup
+> checklist (rulesets, labels, branch protection) is in
+> `docs/ops/repo-setup-checklist.md`.
+>
 > **Naming note:** all references below use the canonical project name
 > **Chorus** (slug `chorus`, domain placeholder `chorus.dev`, npm scope
 > `@chorus/*`, container prefix `chorus-*`, identity namespaces `did:chorus`
@@ -476,9 +482,11 @@ When this prompt is loaded, Conductor executes:
 1. **Load context** — parse Section 1 and the repository.
 2. **Instantiate roster** — create all agents in Section 3.
 3. **Bind graph** — create all channels in Section 4.
-4. **Librarian sweep** — run the Section 6 searches; update
-   `skills/registry.yaml` within 48 hours of agent time.
-5. **Seed todo ledger** — decompose P0 into tasks; assign owners; mark
+4. **Librarian sweep** — run the Section 6 searches; the registry is seeded
+   in `skills/registry.yaml` (all entries `unverified`). Vet and flip entries
+   to `verified`/`rejected` within 48 hours of agent time.
+5. **Seed todo ledger** — the P0 ledger is seeded in
+   `docs/agents/P0-TODO-LEDGER.md`; refine it, assign owners, and mark tasks
    `ready`.
 6. **Grant tools** — per Section 8.
 7. **First standup** — Conductor reports: agents online, skills found, tasks
@@ -732,8 +740,9 @@ via `security-hotfix` label with two human maintainer approvals.
 
 ### 14.6 CODEOWNERS
 
-Teams are created on publish (`@chorus-dev/*`). Until then, reviews fall back
-to the repository owner. See the repository `CODEOWNERS` file.
+Repository: `github.com/exploring-yash/Chorus`. CODEOWNERS currently points at
+the bootstrap maintainer (`@exploring-yash`); team-based ownership replaces
+this when the project moves to an organization and pod teams exist.
 
 ### 14.7 Issue & task tracking
 

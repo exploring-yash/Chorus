@@ -20,7 +20,7 @@ jobs:
       - uses: wagoid/commitlint-github-action@v6
         with:
           configFile: commitlint.config.js
-          helpURL: https://github.com/chorus-dev/chorus/blob/main/CONTRIBUTING.md#commit-messages
+          helpURL: https://github.com/exploring-yash/Chorus/blob/main/CONTRIBUTING.md#commit-messages
 
   markdownlint:
     name: markdown lint

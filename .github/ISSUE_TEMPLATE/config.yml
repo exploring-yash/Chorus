@@ -1,11 +1,11 @@
 blank_issues_enabled: true
 contact_links:
   - name: Read the design intent first
-    url: https://github.com/chorus-dev/chorus/blob/main/docs/spec/intent.md
+    url: https://github.com/exploring-yash/Chorus/blob/main/docs/spec/intent.md
     about: The "why" behind Chorus — start here before opening an issue.
   - name: Contributor guide
-    url: https://github.com/chorus-dev/chorus/blob/main/CONTRIBUTING.md
+    url: https://github.com/exploring-yash/Chorus/blob/main/CONTRIBUTING.md
     about: How contributions, reviews, and skills work.
   - name: Security vulnerability?
-    url: https://github.com/chorus-dev/chorus/blob/main/SECURITY.md
+    url: https://github.com/exploring-yash/Chorus/blob/main/SECURITY.md
     about: Do NOT open a public issue — follow the disclosure process.

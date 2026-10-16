@@ -26,6 +26,9 @@ reachable from here (discoverability rule, per docs/agents/README.md).
 ## Operations
 
 - [agents/](agents/README.md) — agent-orchestration build system
+- [agents/P0-TODO-LEDGER.md](agents/P0-TODO-LEDGER.md) — seeded P0 task ledger
+- [ops/repo-setup-checklist.md](ops/repo-setup-checklist.md) — rulesets, labels, branch protection
+- [issues/](issues/README.md) — good-first-issue drafts ready to post
 - [status.md](status.md) — public project dashboard (generated)
 - [faq.md](faq.md) — frequently asked questions
 - [glossary.md](glossary.md) — shared vocabulary
