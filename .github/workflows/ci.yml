@@ -1,0 +1,109 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  commitlint:
+    name: commit message lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v6
+        with:
+          configFile: commitlint.config.js
+          helpURL: https://github.com/chorus-dev/chorus/blob/main/CONTRIBUTING.md#commit-messages
+
+  markdownlint:
+    name: markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          config: .markdownlint-cli2.jsonc
+          globs: '**/*.md'
+
+  yamllint:
+    name: yaml lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: .
+          config_file: .yamllint.yml
+
+  gitleaks:
+    name: secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dco:
+    name: DCO sign-off check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check DCO sign-off
+        run: bash tools/check-dco.sh
+
+  license:
+    name: license presence check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check licenses
+        run: bash tools/check-license-headers.sh
+
+  docs-frontmatter:
+    name: docs frontmatter check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check docs frontmatter
+        run: bash tools/check-docs-frontmatter.sh
+
+  links:
+    name: link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --accept 200,203,301,302,429
+            '**/*.md'
+          lycheeignore: .lycheeignore
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build-test:
+    name: build and test (activates when code lands)
+    if: hashFiles('services/**/*.ts', 'clients/**/*.ts') != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test --if-present

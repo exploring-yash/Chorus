@@ -1,0 +1,11 @@
+rules:
+  extends: default
+  ignore: |
+    .github/
+    node_modules/
+    LICENSE
+  line-length:
+    max: 120
+    allow-non-breakable-words: true
+  document-start:
+    present: false

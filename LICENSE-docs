@@ -1,0 +1,33 @@
+Creative Commons Attribution 4.0 International — Chorus Documentation License
+
+Copyright (c) 2025 Chorus contributors.
+
+All documentation in this repository is licensed under the Creative Commons
+Attribution 4.0 International License (CC-BY-4.0). "Documentation" means the
+contents of the docs/ directory, README.md, CONTRIBUTING.md, GOVERNANCE.md,
+SECURITY.md, CHANGELOG.md, and all other non-code prose, but excludes the
+LICENSE and LICENSE-docs files themselves and any files that state a
+different license.
+
+You are free to:
+
+  - Share — copy and redistribute the material in any medium or format
+    for any purpose, even commercially.
+  - Adapt — remix, transform, and build upon the material for any
+    purpose, even commercially.
+
+Under the following terms:
+
+  - Attribution — You must give appropriate credit, provide a link to
+    the license, and indicate if changes were made. You may do so in any
+    reasonable manner, but not in any way that suggests the licensor
+    endorses you or your use.
+  - No additional restrictions — You may not apply legal terms or
+    technological measures that legally restrict others from doing
+    anything the license permits.
+
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable deed: https://creativecommons.org/licenses/by/4.0/
+
+Note: source code in this repository is licensed under the Apache License
+2.0. See the LICENSE file.

@@ -1,0 +1,237 @@
+# Chorus Skill Registry — seed (P0)
+#
+# Every entry below was seeded from the design phase's required skill
+# searches. ALL are `unverified` until the Librarian completes the vetting
+# pass (license, maturity, CVEs) and a Verifier co-signs. Do not build on an
+# unverified entry without an escalation (orchestration prompt §10).
+#
+version: skills-2025-01-01
+
+entries:
+  # ── Pod 1: Protocol & Identity ────────────────────────────────────────────
+  - id: skill.did.w3c
+    name: W3C Decentralized Identifiers (DIDs) v1.0
+    purpose: DID core data model and syntax
+    source_url: https://www.w3.org/TR/did-core/
+    license: "W3C Document License"
+    maturity: standard
+    status: unverified
+    owner_agent: ProtoLead
+    verified_by: null
+    citations: []
+
+  - id: skill.did.plc
+    name: did:plc method (Bluesky)
+    purpose: Portable DIDs with rotation keys; Option A identity
+    source_url: https://github.com/did-method-plc/did-method-plc
+    license: "Apache-2.0 / MIT (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: IdentityEng
+    verified_by: null
+    citations: []
+
+  - id: skill.crypto.ed25519
+    name: Ed25519 signing libraries (noble-ed25519 / WebCrypto)
+    purpose: Signatures for SignedObject and DIDs
+    source_url: https://github.com/paulmillr/noble-ed25519
+    license: "MIT (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: SecEng
+    verified_by: null
+    citations: []
+
+  - id: skill.kt.tras
+    name: Key Transparency (reference: Trillian / SEEMless)
+    purpose: Revocation propagation for key transparency log (P3+)
+    source_url: https://github.com/google/trillian
+    license: "Apache-2.0 (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: KeyTransEng
+    verified_by: null
+    citations: []
+
+  # ── Pod 2: Federation & Data ─────────────────────────────────────────────
+  - id: skill.activitypub.spec
+    name: ActivityPub (W3C)
+    purpose: Option A federation envelope
+    source_url: https://www.w3.org/TR/activitypub/
+    license: "W3C Document License"
+    maturity: standard
+    status: unverified
+    owner_agent: FedLead
+    verified_by: null
+    citations: []
+
+  - id: skill.atproto
+    name: AT Protocol
+    purpose: Reference for PDS/relay/appview layering (Option B)
+    source_url: https://atproto.com/
+    license: "MIT / Apache-2.0 (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: FedLead
+    verified_by: null
+    citations: []
+
+  - id: skill.crdt.automerge
+    name: Automerge (CRDT)
+    purpose: Social-graph CRDT merge for follow events
+    source_url: https://github.com/automerge/automerge
+    license: "MIT (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: GraphEng
+    verified_by: null
+    citations: []
+
+  - id: skill.crdt.yjs
+    name: Yjs (CRDT)
+    purpose: Client-side collaborative/offline sync
+    source_url: https://github.com/yjs/yjs
+    license: "MIT (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: ClientLead
+    verified_by: null
+    citations: []
+
+  # ── Pod 3: Video & Delivery ──────────────────────────────────────────────
+  - id: skill.ffmpeg.transcode
+    name: FFmpeg
+    purpose: Transcode ladder (H.264/VP9/AV1), CMAF/fMP4 packaging
+    source_url: https://ffmpeg.org/
+    license: "LGPL-2.1-or-later / GPL-2.0-or-later (parts)"
+    license_note: "Use LGPL build paths; GPL-only filters excluded without legal review"
+    maturity: production
+    status: unverified
+    owner_agent: TranscodeEng
+    verified_by: null
+    citations: []
+
+  - id: skill.codec.svt-av1
+    name: SVT-AV1 encoder
+    purpose: AV1 premium-efficiency renditions
+    source_url: https://gitlab.com/AOMediaCodec/SVT-AV1
+    license: "BSD-3-Clause (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: TranscodeEng
+    verified_by: null
+    citations: []
+
+  - id: skill.storage.minio
+    name: MinIO (S3-compatible object store)
+    purpose: CAS backing store for renditions
+    source_url: https://github.com/minio/minio
+    license: "AGPL-3.0 — FLAG for legal review"
+    maturity: production
+    status: unverified
+    owner_agent: CASEng
+    verified_by: null
+    citations: []
+
+  - id: skill.delivery.webtorrent
+    name: WebTorrent / P2P Media Loader
+    purpose: Browser P2P assist for warm content
+    source_url: https://github.com/webtorrent/webtorrent
+    license: "MIT (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: P2PEng
+    verified_by: null
+    citations: []
+
+  # ── Pod 4: Reciprocity & Amplification ───────────────────────────────────
+  - id: skill.notes.community
+    name: Community Notes algorithm (open-source implementations)
+    purpose: Bridging-based ranking for cross-perspective notes
+    source_url: https://github.com/twitter/communitynotes
+    license: "Apache-2.0 (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: ResponseEng
+    verified_by: null
+    citations: []
+
+  - id: skill.policy.opa
+    name: Open Policy Agent (Rego)
+    purpose: Amplification policy engine DSL candidate
+    source_url: https://www.openpolicyagent.org/
+    license: "Apache-2.0 (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: AmpEng
+    verified_by: null
+    citations: []
+
+  - id: skill.policy.cedar
+    name: Cedar policy language
+    purpose: Alternative policy DSL for tier obligations
+    source_url: https://www.cedarpolicy.com/
+    license: "Apache-2.0 (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: AmpEng
+    verified_by: null
+    citations: []
+
+  # ── Pod 5: Moderation & Governance ───────────────────────────────────────
+  - id: skill.moderation.sortition
+    name: Sortition reference implementations
+    purpose: Jury selection weighted for cross-community participation
+    source_url: https://github.com/search?q=sortition (to be pinned by Librarian)
+    license: "TBD"
+    maturity: unknown
+    status: unverified
+    owner_agent: JuryEng
+    verified_by: null
+    citations: []
+
+  - id: skill.safety.csam
+    name: CSAM hash-matching pipeline (reference: NCMEC/PhotoDNA alternatives)
+    purpose: Illegal-content detection floor
+    source_url: "https://www.missingkids.org/ (reference; alternatives required for open licensing)"
+    license: "proprietary — alternatives required"
+    maturity: production
+    status: unverified
+    owner_agent: TrustEng
+    verified_by: null
+    citations: []
+
+  # ── Pod 6: Client & UX ───────────────────────────────────────────────────
+  - id: skill.client.react
+    name: React / React Native
+    purpose: Web and mobile clients
+    source_url: https://react.dev/
+    license: "MIT (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: ClientLead
+    verified_by: null
+    citations: []
+
+  # ── Cross-cutting ────────────────────────────────────────────────────────
+  - id: skill.reference.peertube
+    name: PeerTube (reference implementation)
+    purpose: Federated video reference; interop target (Option A)
+    source_url: https://joinpeertube.org/
+    license: "AGPL-3.0 — reference only, do not vendor"
+    maturity: production
+    status: unverified
+    owner_agent: FedLead
+    verified_by: null
+    citations: []
+
+  - id: skill.obs.opentelemetry
+    name: OpenTelemetry
+    purpose: Observability across services
+    source_url: https://opentelemetry.io/
+    license: "Apache-2.0 (verify)"
+    maturity: production
+    status: unverified
+    owner_agent: SREEng
+    verified_by: null
+    citations: []

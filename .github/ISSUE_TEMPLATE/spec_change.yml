@@ -1,0 +1,55 @@
+name: Spec change
+description: Propose a change to the protocol or a service spec (requires an ADR)
+title: "spec(<scope>): "
+labels: ["spec", "needs-adr"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Spec changes follow GOVERNANCE.md §3: major changes need lazy
+        consensus and an ADR; protocol changes additionally need the
+        Community Council once it exists, plus a deprecation window for
+        breaking changes.
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed change
+      description: What changes, in which spec file?
+      placeholder: "docs/spec/services/amplification.md — add an expiry to AmplifyDecision objects."
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation and intent trace
+      description: Why, and which principle (docs/spec/intent.md) does it serve?
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - "Additive (new capability, no breakage)"
+        - "Breaking (needs migration guide + deprecation window)"
+        - "Clarification (spec was ambiguous)"
+    validations:
+      required: true
+  - type: textarea
+    id: adr
+    attributes:
+      label: ADR link
+      description: Paste the ADR that records this decision, or state it's being drafted.
+      placeholder: "docs/adr/ADR-0007-*.md (draft)"
+  - type: textarea
+    id: implications
+    attributes:
+      label: Implications
+      description: Which services, clients, or test vectors are affected? Cost or security implications?
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contributor terms
+      options:
+        - label: I have read CONTRIBUTING.md and GOVERNANCE.md
+          required: true
