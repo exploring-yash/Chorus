@@ -13,7 +13,7 @@
     "check": "bash tools/check-docs-frontmatter.sh && bash tools/check-license-headers.sh"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.0.0",
+    "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^19.0.0",
     "markdownlint-cli2": "^0.13.0"
   },
